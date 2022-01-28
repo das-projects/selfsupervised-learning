@@ -15,14 +15,14 @@ ARXIV
 Conference   
 -->   
 </div>
- 
-# Self-Supervised Pre-training
 
-This directory contains two scripts. The first script 'ssl_script_train.py' generates
-a good set of pre-trained weights using unlabeled data with self-supervised tasks that
-are based on augmentations of different types. The second script 'ssl_finetune_train.py' uses
-the pre-trained weights generated from the first script and performs fine-tuning on a fully supervised
-task.
+Self-supervised learning algorithms provide a way to train Deep Neural Networks in an unsupervised way using contrastive 
+losses. The idea is to learn a representation which can discriminate between negative examples and be as close as 
+possible to augmentations and transformations of itself. In this approach, we first train a ResNet on the unlabeled 
+dataset which is then fine-tuned on a relatively small labeled one. This approach drastically reduces the amount of 
+labeled data required, a big problem in applying deep learning in the real world. Surprisingly, this approach actually 
+leads to increase in robustness as well as raw performance, when compared to fully supervised counterparts, even with 
+the same architecture.   
 
 In case, the user wants to skip the pre-training part, the pre-trained weights can be
 [downloaded from here](https://drive.google.com/file/d/1z0BouIiQ9oLizubOIH9Rlpad5Kk_2RtY/view?usp=sharing)
